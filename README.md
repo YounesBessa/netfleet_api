@@ -19,13 +19,13 @@ This is a simple symfony movies/tv series micro-api project.
 
 #### Clone the project
 
-    git clone git://github.com/evalSymf.git
+  git clone https://github.com/YounesBessa/netfleet_api.git
 
 #### Install the vendors
 
-        cd netfleet_api
-        composer install
+  cd netfleet_api
+  composer install
 
 #### Create the database
 
-            doctrine:database:create
+  doctrine:database:create
