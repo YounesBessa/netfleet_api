@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<style>
+    body{background:grey;font: 18px/1.5 sans-serif; }
+    .header{display:flex;flex-direction:column;line-height:0;justify-content:center;align-items:center;}
+    .moviecard { border-radius:15px; color:white;display:flex; flex-direction: column; justify-content:center; align-items:center; background: #1c1d21; padding: 6px; margin: 1em auto; max-width: 800px; width: fit-content;}
+    .thumbnail {  max-width: 200px; }
+    .movietitle{text-transform: capitalize; font-size:20px;}
+</style>
+<div class="header">
+<h1>NetFleetUgly DB</h1>
+<p class="description">The world's ugliest movie DB</p>
+<p class="subtitle">✨ Made in Symfony ✨</p>
+</div>
+{% for show in shows %}
+    <div class="moviecard">
+    <img class="thumbnail" src="https://picsum.photos/200/200">
+        <h1 class="movietitle">Title: {{ show.name }}</h1>
+        <p class="synopsis">Synopsis: {{ show.synopsis }}</p>
+        <p class="date">Added on: {{ show.creationdate|date('d/m/Y') }}</p>
+    </div>
+{% endfor %}
+{% endblock %}
